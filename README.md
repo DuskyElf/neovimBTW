@@ -1,40 +1,15 @@
 <!-- markdownlint-disable -->
 <br />
 <div align="center">
-  <a href="https://github.com/nix-community/kickstart-nix.nvim">
-    <img src="./nvim-nix.svg" alt="kickstart-nix.nvim">
-  </a>
-  <!-- TODO: -->
-  <!-- <p align="center"> -->
-    <!-- <br /> -->
-    <!-- TODO: -->
-    <!-- <a href="./nvim/doc/kickstart-nix.txt"><strong>Explore the docs »</strong></a> -->
-    <!-- <br /> -->
-    <!-- <br /> -->
-    <!-- <a href="https://github.com/nix-community/kickstart-nix.nvim/issues/new?assignees=&labels=bug&projects=&template=bug_report.yml">Report Bug</a> -->
-    <!-- · -->
-    <!-- <a href="https://github.com/nix-community/kickstart-nix.nvim/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.yml">Request Feature</a> -->
-    <!-- · -->
-    <!-- <a href="https://github.com/nix-community/kickstart-nix.nvim/discussions/new?category=q-a">Ask Question</a> -->
-  <!-- </p> -->
+    <h1>NeovimBTW</h1>
+    <p>My Neovim Config starting from <a href="https://github.com/nix-community/kickstart-nix.nvim">kickstart-nix.nvim</a></p>
   <p>❄️</p>
-  <p>
-    <strong>
-      A dead simple <a href="https://nixos.org/">Nix</a> flake template repository</br>
-      for <a href="https://neovim.io/">Neovim</a> 
-    </strong>
-  </p>
-
-[![Neovim][neovim-shield]][neovim-url]
-[![Nix][nix-shield]][nix-url]
-[![Lua][lua-shield]][lua-url]
-
-[![GPL2 License][license-shield]][license-url]
-[![Issues][issues-shield]][issues-url]
 </div>
-<!-- markdownlint-restore -->
 
-![](https://github.com/nix-community/kickstart-nix.nvim/assets/12857160/84faa268-82de-4401-acf3-efddc26dd58a)
+## Quick run NeovimBTW
+```console
+nix run github:DuskyElf/neovimBTW
+```
 
 ## :grey_question: Why kickstart-nix.nvim
 
