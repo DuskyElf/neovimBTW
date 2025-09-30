@@ -67,7 +67,6 @@ vim.diagnostic.config {
   },
   signs = {
     text = {
-      -- Requires Nerd fonts
       [vim.diagnostic.severity.ERROR] = '󰅚',
       [vim.diagnostic.severity.WARN] = '⚠',
       [vim.diagnostic.severity.INFO] = 'ⓘ',

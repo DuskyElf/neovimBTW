@@ -5,16 +5,6 @@ vim.g.did_load_autocommands_plugin = true
 
 local api = vim.api
 
-local tempdirgroup = api.nvim_create_augroup('tempdir', { clear = true })
--- Do not set undofile for files in /tmp
-api.nvim_create_autocmd('BufWritePre', {
-  pattern = '/tmp/*',
-  group = tempdirgroup,
-  callback = function()
-    vim.cmd.setlocal('noundofile')
-  end,
-})
-
 -- Disable spell checking in terminal buffers
 local nospell_group = api.nvim_create_augroup('nospell', { clear = true })
 api.nvim_create_autocmd('TermOpen', {
@@ -61,9 +51,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
     local bufnr = ev.buf
     local client = vim.lsp.get_client_by_id(ev.data.client_id)
-
-    -- Attach plugins
-    require('nvim-navic').attach(client, bufnr)
 
     vim.cmd.setlocal('signcolumn=yes')
     vim.bo[bufnr].bufhidden = 'hide'
