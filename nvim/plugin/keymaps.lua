@@ -8,6 +8,14 @@ local fn = vim.fn
 local keymap = vim.keymap
 local diagnostic = vim.diagnostic
 
+-- Run lua on spot
+vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
+vim.keymap.set("n", "<space>x", ":.lua<CR>")
+vim.keymap.set("v", "<space>x", ":lua<CR>")
+
+-- Open the folder view
+vim.keymap.set("n", "<leader>ls", vim.cmd.Ex)
+
 -- Yank from current position till end of current line
 keymap.set('n', 'Y', 'y$', { silent = true, desc = '[Y]ank to end of line' })
 

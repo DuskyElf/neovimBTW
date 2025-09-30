@@ -1,23 +1,18 @@
 vim.loader.enable()
 
-local cmd = vim.cmd
 local opt = vim.o
+local cmd = vim.cmd
 
--- <leader> key. Defaults to `\`. Some people prefer space.
--- The default leader is '\'. Some people prefer <space>. Uncomment this if you do, too.
--- vim.g.mapleader = ' '
--- vim.g.maplocalleader = ' '
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
--- See :h <option> to see what the options do
-
--- Search down into subfolders
 opt.path = vim.o.path .. '**'
 
 opt.number = true
 opt.relativenumber = true
-opt.cursorline = true
 opt.lazyredraw = true
-opt.showmatch = true -- Highlight matching parentheses, etc
+opt.showmatch = true
+opt.matchtime = 3
 opt.incsearch = true
 opt.hlsearch = true
 
@@ -25,22 +20,22 @@ opt.spell = true
 opt.spelllang = 'en'
 
 opt.expandtab = true
-opt.tabstop = 2
-opt.softtabstop = 2
-opt.shiftwidth = 2
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
 opt.foldenable = true
 opt.history = 2000
 opt.nrformats = 'bin,hex' -- 'octal'
 opt.undofile = true
 opt.splitright = true
 opt.splitbelow = true
-opt.cmdheight = 0
-
 opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+
+-- Don't know much about
+opt.cmdheight = 0
 opt.colorcolumn = '100'
 
 -- Configure Neovim diagnostic messages
-
 local function prefix_diagnostic(prefix, diagnostic)
   return string.format(prefix .. ' %s', diagnostic.message)
 end
