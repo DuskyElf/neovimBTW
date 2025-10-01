@@ -60,7 +60,7 @@ cmp.setup {
         complete_with_source('buffer')
       end
     end, { 'i', 'c', 's' }),
-    ['<C-f>'] = cmp.mapping(function(_)
+    ['<C-e>'] = cmp.mapping(function(_)
       if cmp.visible() then
         cmp.scroll_docs(4)
       else
@@ -89,15 +89,7 @@ cmp.setup {
         fallback()
       end
     end, { 'i', 'c', 's' }),
-    -- toggle completion
-    ['<C-e>'] = cmp.mapping(function(_)
-      if cmp.visible() then
-        cmp.close()
-      else
-        cmp.complete()
-      end
-    end, { 'i', 'c', 's' }),
-    ['<C-y>'] = cmp.mapping.confirm {
+    ['<C-f>'] = cmp.mapping.confirm {
       select = true,
     },
   },
