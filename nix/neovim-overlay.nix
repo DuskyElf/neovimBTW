@@ -67,6 +67,7 @@ with final.pkgs.lib; let
     # ^ language support
 
     # navigation/editing enhancement plugins
+    mini-pairs
     vim-unimpaired # predefined ] and [ navigation keymaps | https://github.com/tpope/vim-unimpaired/
     eyeliner-nvim # Highlights unique characters for f/F and t/T motions | https://github.com/jinh0/eyeliner.nvim
     nvim-surround # https://github.com/kylechui/nvim-surround/
