@@ -74,6 +74,10 @@ with final.pkgs.lib; let
     nvim-treesitter-textobjects # https://github.com/nvim-treesitter/nvim-treesitter-textobjects/
     # ^ navigation/editing enhancement plugins
 
+    # Ai stuff
+    copilot-lua
+    # ^ Ai stuff
+
     # libraries that other plugins depend on
     sqlite-lua
     plenary-nvim
@@ -90,6 +94,8 @@ with final.pkgs.lib; let
     # language servers, etc.
     lua-language-server
     nil # nix LSP
+
+    nodejs
   ];
 in {
   # This is the neovim derivation
