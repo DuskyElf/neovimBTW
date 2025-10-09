@@ -13,6 +13,13 @@ vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
 vim.keymap.set("n", "<space>x", ":.lua<CR>")
 vim.keymap.set("v", "<space>x", ":lua<CR>")
 
+-- Copy to system clipboard
+vim.keymap.set('n', '<space>y', '"+y')
+vim.keymap.set('v', '<space>y', '"+y')
+
+-- Paste from system clipboard
+vim.keymap.set('n', '<space>p', '"+p')
+
 -- Open the folder view
 vim.keymap.set("n", "<leader>ls", vim.cmd.Ex)
 
