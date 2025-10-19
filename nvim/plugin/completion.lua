@@ -6,6 +6,7 @@ vim.g.did_load_completion_plugin = true
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 
+vim.o.pumheight = 5
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
 cmp.setup {
