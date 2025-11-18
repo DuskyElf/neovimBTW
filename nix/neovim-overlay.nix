@@ -46,6 +46,10 @@ with final.pkgs.lib; let
     nvim-lspconfig
     # ^ nvim-cmp extensions
 
+    # productivity
+    obsidian-nvim
+    # ^ productivity
+
     # git integration plugins
     diffview-nvim # https://github.com/sindrets/diffview.nvim/
     gitsigns-nvim # https://github.com/lewis6991/gitsigns.nvim/

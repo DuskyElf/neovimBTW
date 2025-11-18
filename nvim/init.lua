@@ -6,6 +6,9 @@ local cmd = vim.cmd
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- for markdown files with obsidian
+vim.opt_local.conceallevel = 2
+
 opt.path = vim.o.path .. '**'
 
 opt.number = true
