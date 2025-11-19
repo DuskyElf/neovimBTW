@@ -82,6 +82,7 @@ with final.pkgs.lib; let
 
     # Ai stuff
     copilot-lua
+    avante-nvim
     # ^ Ai stuff
 
     # libraries that other plugins depend on
