@@ -1,4 +1,4 @@
-local servers = {'html', 'jsonls', 'cssls', 'ts_ls', 'tailwindcss', 'eslint', "astro" }
+local servers = {'html', 'jsonls', 'cssls', 'ts_ls', 'tailwindcss', 'eslint', "astro", 'svelte' }
 
 for _, server in ipairs(servers) do
   vim.lsp.config(server, {
