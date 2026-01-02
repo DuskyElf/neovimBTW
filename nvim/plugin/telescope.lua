@@ -37,15 +37,6 @@ local layout_config = {
   },
 }
 
--- Fall back to find_files if not in a git repo
-local project_files = function()
-  local opts = {} -- define here if you want to define something
-  local ok = pcall(builtin.git_files, opts)
-  if not ok then
-    builtin.find_files(opts)
-  end
-end
-
 --- Like live_grep, but fuzzy (and slower)
 local function fuzzy_grep(opts)
   opts = vim.tbl_extend('error', opts or {}, { search = '', prompt_title = 'Fuzzy grep' })
@@ -55,7 +46,7 @@ end
 vim.keymap.set('n', '<C-p>', builtin.oldfiles, { desc = '[telescope] old files' })
 vim.keymap.set('n', '<C-g>', builtin.live_grep, { desc = '[telescope] live grep' })
 vim.keymap.set('n', '<leader>:', builtin.builtin, { desc = 'telescope [:] builtins' })
-vim.keymap.set('n', '<leader>o', project_files, { desc = 'telescope [o]pen file' })
+vim.keymap.set('n', '<leader>o', builtin.find_files, { desc = 'telescope [o]pen file' })
 vim.keymap.set('n', '<leader>b', builtin.buffers, { desc = 'telescope [b]uffers' })
 vim.keymap.set('n', '<leader>fg', fuzzy_grep, { desc = 'telescope [f]uzzy [g]rep' })
 vim.keymap.set('n', '<leader>fs', builtin.spell_suggest, { desc = 'telescope [f]ix [s]pell' })
