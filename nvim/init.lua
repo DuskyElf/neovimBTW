@@ -9,9 +9,6 @@ vim.g.maplocalleader = ' '
 -- for markdown files with obsidian
 vim.opt_local.conceallevel = 2
 
--- for avante
-vim.opt.laststatus = 3
-
 opt.path = vim.o.path .. '**'
 
 opt.number = true

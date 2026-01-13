@@ -21,13 +21,3 @@ require('copilot').setup({
         }
     },
 })
-
-require('avante').setup({
-    provider = 'copilot',
-
-    providers = {
-        copilot = {
-            model = 'gpt-4.1',
-        }
-    }
-})
