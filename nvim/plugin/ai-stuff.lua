@@ -31,14 +31,16 @@ require("snacks").setup({
     },
     picker = {
         enable = true,
+    },
+    terminal = {
+        enable = true,
     }
 })
 
 vim.g.opencode_opts = {
-    port = 5096,
     provider = {
+        enabled = "snacks",
         cmd = "opencode --agent neovim",
-        enabled = "tmux",
     },
 }
 
