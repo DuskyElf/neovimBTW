@@ -3,8 +3,12 @@ require("obsidian").setup {
 
   workspaces = {
     {
-      name = "brain",
+      name = "personal",
       path = "~/Documents/brain/",
+    },
+    {
+      name = "brain",
+      path = "~/Projects/duskyelf.github.io/content/",
     }
   },
 
