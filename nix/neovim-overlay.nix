@@ -30,6 +30,7 @@ with final.pkgs.lib; let
   all-plugins = with pkgs.vimPlugins; [
     # plugins from nixpkgs go in here.
     # https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vimPlugins
+    nvim-treesitter
     nvim-treesitter.withAllGrammars
 
     # nvim-cmp (autocompletion) and extensions
@@ -73,6 +74,7 @@ with final.pkgs.lib; let
     # ^ language support
 
     # navigation/editing enhancement plugins
+    (inputs.fff-nvim.outputs.packages.${pkgs.stdenv.hostPlatform.system}.fff-nvim)
     mini-pairs
     vim-unimpaired # predefined ] and [ navigation keymaps | https://github.com/tpope/vim-unimpaired/
     eyeliner-nvim # Highlights unique characters for f/F and t/T motions | https://github.com/jinh0/eyeliner.nvim
