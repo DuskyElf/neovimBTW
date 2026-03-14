@@ -84,7 +84,6 @@ with final.pkgs.lib; let
 
     # Ai stuff
     copilot-lua
-    opencode-nvim
     snacks-nvim # dependency for opencode-nvim
     # ^ Ai stuff
 
