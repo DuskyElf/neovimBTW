@@ -4,12 +4,8 @@ require("obsidian").setup {
   workspaces = {
     {
       name = "personal",
-      path = "~/Documents/brain/",
+      path = "~/Projects/duskyelf.com/content/",
     },
-    {
-      name = "brain",
-      path = "~/Projects/duskyelf.github.io/content/",
-    }
   },
 
   notes_subdir = "notes",
