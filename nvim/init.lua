@@ -46,24 +46,9 @@ local function prefix_diagnostic(prefix, diagnostic)
 end
 
 vim.diagnostic.config {
-  virtual_text = {
-    prefix = '',
-    format = function(diagnostic)
-      local severity = diagnostic.severity
-      if severity == vim.diagnostic.severity.ERROR then
-        return prefix_diagnostic('󰅚', diagnostic)
-      end
-      if severity == vim.diagnostic.severity.WARN then
-        return prefix_diagnostic('⚠', diagnostic)
-      end
-      if severity == vim.diagnostic.severity.INFO then
-        return prefix_diagnostic('ⓘ', diagnostic)
-      end
-      if severity == vim.diagnostic.severity.HINT then
-        return prefix_diagnostic('󰌶', diagnostic)
-      end
-      return prefix_diagnostic('■', diagnostic)
-    end,
+  virtual_text = false,
+  virtual_lines = {
+    current_line = true,
   },
   signs = {
     text = {
